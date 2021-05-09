@@ -29,11 +29,31 @@ const config: NuxtConfig = {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/typescript
-    "@nuxt/typescript-build"
+    "@nuxt/typescript-build",
+    "@nuxtjs/composition-api"
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: [
+    [
+      "@nuxtjs/firebase",
+      {
+        config: {
+          apiKey: "AIzaSyDh54hdeC-1hZhjAa5FWFfvrib0Sz9ltuM",
+          authDomain: "ts-fire-practice.firebaseapp.com",
+          databaseURL: "https://ts-fire-practice.firebaseio.com",
+          projectId: "ts-fire-practice",
+          storageBucket: "ts-fire-practice.appspot.com",
+          messagingSenderId: "519588662982",
+          appId: "1:519588662982:web:38beae9a58daaccc6b51c7",
+          measurementId: "G-L0GEER9GTP"
+        },
+        services: {
+          auth: true // Just as example. Can be any other service.
+        }
+      }
+    ]
+  ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {}
