@@ -33,27 +33,23 @@ const config: NuxtConfig = {
     "@nuxtjs/composition-api"
   ],
 
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    [
-      "@nuxtjs/firebase",
-      {
-        config: {
-          apiKey: "AIzaSyDh54hdeC-1hZhjAa5FWFfvrib0Sz9ltuM",
-          authDomain: "ts-fire-practice.firebaseapp.com",
-          databaseURL: "https://ts-fire-practice.firebaseio.com",
-          projectId: "ts-fire-practice",
-          storageBucket: "ts-fire-practice.appspot.com",
-          messagingSenderId: "519588662982",
-          appId: "1:519588662982:web:38beae9a58daaccc6b51c7",
-          measurementId: "G-L0GEER9GTP"
-        },
-        services: {
-          auth: true // Just as example. Can be any other service.
-        }
-      }
-    ]
-  ],
+  modules: ["@nuxtjs/firebase"],
+  firebase: {
+    config: {
+      apiKey: "ここの値は人それぞれ違います",
+      authDomain: "ここの値は人それぞれ違います",
+      databaseURL: "ここの値は人それぞれ違います",
+      projectId: "ここの値は人それぞれ違います",
+      storageBucket: "ここの値は人それぞれ違います",
+      messagingSenderId: "ここの値は人それぞれ違います",
+      appId: "ここの値は人それぞれ違います",
+      measurementId: "ここの値は人それぞれ違います"
+    },
+    services: {
+      auth: true,
+      firestore: true
+    }
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {}
